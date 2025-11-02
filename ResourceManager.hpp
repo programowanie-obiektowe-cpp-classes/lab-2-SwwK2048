@@ -4,5 +4,14 @@
 
 class ResourceManager
 {
-    // Twoja implementacja tutaj
+    Resource* resource;
+
+    public:
+        ResourceManager() : resource(new Resource()) {}
+
+        ~ResourceManager() { delete resource; }
+
+        double get() const {
+            return resource->get();
+    }
 };
